@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KineApp.API", "KineApp.API\KineApp.API.csproj", "{DCFA4FC5-62F4-4C09-A2F1-BFF53890AF23}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KineApp.DL", "KineApp.DL\KineApp.DL.csproj", "{E1898A36-4936-4CA0-8198-AF4D23A3C047}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KineApp.DAL", "KineApp.DAL\KineApp.DAL.csproj", "{17B5A9A6-DFC5-48F8-B3F5-B6646EF9DC53}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Toolbox.EF", "ToolBox.EF\Toolbox.EF.csproj", "{A0AEA054-D800-44DD-8E2A-1BC53E011503}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Toolbox.Security", "Toolbox.Security\Toolbox.Security.csproj", "{79063152-FDF4-4576-B9D5-F0CF0397F7FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KineApp.BLL", "KineApp.BLL\KineApp.BLL.csproj", "{F35F4259-2A50-49B9-8F92-11CA9F4D0691}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCFA4FC5-62F4-4C09-A2F1-BFF53890AF23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCFA4FC5-62F4-4C09-A2F1-BFF53890AF23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCFA4FC5-62F4-4C09-A2F1-BFF53890AF23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCFA4FC5-62F4-4C09-A2F1-BFF53890AF23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1898A36-4936-4CA0-8198-AF4D23A3C047}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1898A36-4936-4CA0-8198-AF4D23A3C047}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1898A36-4936-4CA0-8198-AF4D23A3C047}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1898A36-4936-4CA0-8198-AF4D23A3C047}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17B5A9A6-DFC5-48F8-B3F5-B6646EF9DC53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17B5A9A6-DFC5-48F8-B3F5-B6646EF9DC53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17B5A9A6-DFC5-48F8-B3F5-B6646EF9DC53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17B5A9A6-DFC5-48F8-B3F5-B6646EF9DC53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0AEA054-D800-44DD-8E2A-1BC53E011503}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0AEA054-D800-44DD-8E2A-1BC53E011503}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0AEA054-D800-44DD-8E2A-1BC53E011503}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0AEA054-D800-44DD-8E2A-1BC53E011503}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79063152-FDF4-4576-B9D5-F0CF0397F7FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79063152-FDF4-4576-B9D5-F0CF0397F7FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79063152-FDF4-4576-B9D5-F0CF0397F7FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79063152-FDF4-4576-B9D5-F0CF0397F7FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F35F4259-2A50-49B9-8F92-11CA9F4D0691}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F35F4259-2A50-49B9-8F92-11CA9F4D0691}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F35F4259-2A50-49B9-8F92-11CA9F4D0691}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F35F4259-2A50-49B9-8F92-11CA9F4D0691}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD55C63C-AF28-458F-A7C9-7264C57C6CBA}
+	EndGlobalSection
+EndGlobal

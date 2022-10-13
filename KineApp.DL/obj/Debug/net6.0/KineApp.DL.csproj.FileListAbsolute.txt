@@ -1,0 +1,12 @@
+C:\Users\Student\source\repos\KineApp\KineApp.DL\bin\Debug\net6.0\KineApp.DL.deps.json
+C:\Users\Student\source\repos\KineApp\KineApp.DL\bin\Debug\net6.0\KineApp.DL.dll
+C:\Users\Student\source\repos\KineApp\KineApp.DL\bin\Debug\net6.0\KineApp.DL.pdb
+C:\Users\Student\source\repos\KineApp\KineApp.DL\obj\Debug\net6.0\KineApp.DL.csproj.AssemblyReference.cache
+C:\Users\Student\source\repos\KineApp\KineApp.DL\obj\Debug\net6.0\KineApp.DL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\source\repos\KineApp\KineApp.DL\obj\Debug\net6.0\KineApp.DL.AssemblyInfoInputs.cache
+C:\Users\Student\source\repos\KineApp\KineApp.DL\obj\Debug\net6.0\KineApp.DL.AssemblyInfo.cs
+C:\Users\Student\source\repos\KineApp\KineApp.DL\obj\Debug\net6.0\KineApp.DL.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\KineApp\KineApp.DL\obj\Debug\net6.0\KineApp.DL.dll
+C:\Users\Student\source\repos\KineApp\KineApp.DL\obj\Debug\net6.0\refint\KineApp.DL.dll
+C:\Users\Student\source\repos\KineApp\KineApp.DL\obj\Debug\net6.0\KineApp.DL.pdb
+C:\Users\Student\source\repos\KineApp\KineApp.DL\obj\Debug\net6.0\ref\KineApp.DL.dll

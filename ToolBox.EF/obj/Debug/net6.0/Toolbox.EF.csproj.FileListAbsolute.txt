@@ -1,0 +1,12 @@
+C:\Users\Student\source\repos\KineApp\ToolBox.EF\bin\Debug\net6.0\Toolbox.EF.deps.json
+C:\Users\Student\source\repos\KineApp\ToolBox.EF\bin\Debug\net6.0\Toolbox.EF.dll
+C:\Users\Student\source\repos\KineApp\ToolBox.EF\bin\Debug\net6.0\Toolbox.EF.pdb
+C:\Users\Student\source\repos\KineApp\ToolBox.EF\obj\Debug\net6.0\Toolbox.EF.csproj.AssemblyReference.cache
+C:\Users\Student\source\repos\KineApp\ToolBox.EF\obj\Debug\net6.0\Toolbox.EF.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\source\repos\KineApp\ToolBox.EF\obj\Debug\net6.0\Toolbox.EF.AssemblyInfoInputs.cache
+C:\Users\Student\source\repos\KineApp\ToolBox.EF\obj\Debug\net6.0\Toolbox.EF.AssemblyInfo.cs
+C:\Users\Student\source\repos\KineApp\ToolBox.EF\obj\Debug\net6.0\Toolbox.EF.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\KineApp\ToolBox.EF\obj\Debug\net6.0\Toolbox.EF.dll
+C:\Users\Student\source\repos\KineApp\ToolBox.EF\obj\Debug\net6.0\refint\Toolbox.EF.dll
+C:\Users\Student\source\repos\KineApp\ToolBox.EF\obj\Debug\net6.0\Toolbox.EF.pdb
+C:\Users\Student\source\repos\KineApp\ToolBox.EF\obj\Debug\net6.0\ref\Toolbox.EF.dll

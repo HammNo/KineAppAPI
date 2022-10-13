@@ -1,0 +1,12 @@
+C:\Users\Student\source\repos\KineApp\Toolbox.Security\bin\Debug\net6.0\Toolbox.Security.deps.json
+C:\Users\Student\source\repos\KineApp\Toolbox.Security\bin\Debug\net6.0\Toolbox.Security.dll
+C:\Users\Student\source\repos\KineApp\Toolbox.Security\bin\Debug\net6.0\Toolbox.Security.pdb
+C:\Users\Student\source\repos\KineApp\Toolbox.Security\obj\Debug\net6.0\Toolbox.Security.csproj.AssemblyReference.cache
+C:\Users\Student\source\repos\KineApp\Toolbox.Security\obj\Debug\net6.0\Toolbox.Security.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\source\repos\KineApp\Toolbox.Security\obj\Debug\net6.0\Toolbox.Security.AssemblyInfoInputs.cache
+C:\Users\Student\source\repos\KineApp\Toolbox.Security\obj\Debug\net6.0\Toolbox.Security.AssemblyInfo.cs
+C:\Users\Student\source\repos\KineApp\Toolbox.Security\obj\Debug\net6.0\Toolbox.Security.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\KineApp\Toolbox.Security\obj\Debug\net6.0\Toolbox.Security.dll
+C:\Users\Student\source\repos\KineApp\Toolbox.Security\obj\Debug\net6.0\refint\Toolbox.Security.dll
+C:\Users\Student\source\repos\KineApp\Toolbox.Security\obj\Debug\net6.0\Toolbox.Security.pdb
+C:\Users\Student\source\repos\KineApp\Toolbox.Security\obj\Debug\net6.0\ref\Toolbox.Security.dll

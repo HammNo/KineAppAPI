@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "6Ou85EzY0BMOm7XnNFS6Pid0wY3AMTNd9Vz4GP8kYPw=",
+  "Source": "KineApp.API",
+  "BasePath": "_content/KineApp.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
