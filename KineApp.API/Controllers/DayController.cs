@@ -29,18 +29,22 @@ namespace KineApp.API.Controllers
                 //Si simple user : return Ok(_dayService.GetDay(query, false));
                 return Ok(_dayService.GetDay(query, false));
             }
-            catch(DayException de)
+            catch (KeyNotFoundException )
+            {
+                return NotFound();
+            }
+            catch (DayException de)
             {
                 return BadRequest(de.Message);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 return BadRequest(e.Message);
             }
         }
 
         [HttpPost]
-        public IActionResult AddDay(DayAddDTO command)
+        public IActionResult Add(DayAddDTO command)
         {
             try
             {
@@ -48,6 +52,28 @@ namespace KineApp.API.Controllers
                 return NoContent();
             }
             catch (WeekException we)
+            {
+                return BadRequest(we.Message);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+
+        [HttpPatch("{id}/reveal")]
+        public IActionResult Reveal(Guid id)
+        {
+            try
+            {
+                _dayService.RevealDay(id);
+                return NoContent();
+            }
+            catch (KeyNotFoundException)
+            {
+                return NotFound();
+            }
+            catch (DayException we)
             {
                 return BadRequest(we.Message);
             }

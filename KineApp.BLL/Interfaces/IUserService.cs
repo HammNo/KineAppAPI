@@ -12,5 +12,7 @@ namespace KineApp.BLL.Interfaces
         IEnumerable<UserDTO> FindUsers(UserSearchDTO query);
         Guid Add(UserAddDTO command);
         Guid Remove(Guid id);
+        Task<Guid> Register(UserAddDTO command);
+        void Validate(Guid userId, Guid validationCode);
     }
 }

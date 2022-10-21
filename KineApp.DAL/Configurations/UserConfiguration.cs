@@ -34,7 +34,8 @@ namespace KineApp.DAL.Configurations
                 LastName = "Zero",
                 Gender = DL.Enums.UserGender.Other,
                 Email = "test@mail.com",
-                PhoneNumber = "0111111111"
+                PhoneNumber = "0111111111",
+                ValidationCode = null
             };
         }
     }

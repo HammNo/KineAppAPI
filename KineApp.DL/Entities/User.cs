@@ -22,6 +22,8 @@ namespace KineApp.DL.Entities
         public UserGender Gender { get; set; }
 
         public string PhoneNumber { get; set; } = string.Empty;
+
+        public Guid? ValidationCode { get; set; }
         #endregion
 
         #region relations

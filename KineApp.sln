@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Toolbox.EF", "ToolBox.EF\To
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Toolbox.Security", "Toolbox.Security\Toolbox.Security.csproj", "{79063152-FDF4-4576-B9D5-F0CF0397F7FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KineApp.BLL", "KineApp.BLL\KineApp.BLL.csproj", "{F35F4259-2A50-49B9-8F92-11CA9F4D0691}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KineApp.BLL", "KineApp.BLL\KineApp.BLL.csproj", "{F35F4259-2A50-49B9-8F92-11CA9F4D0691}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KineApp.IL", "KineApp.IL\KineApp.IL.csproj", "{526E4535-3D21-47EE-A0B8-A1895FAE88E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{F35F4259-2A50-49B9-8F92-11CA9F4D0691}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F35F4259-2A50-49B9-8F92-11CA9F4D0691}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F35F4259-2A50-49B9-8F92-11CA9F4D0691}.Release|Any CPU.Build.0 = Release|Any CPU
+		{526E4535-3D21-47EE-A0B8-A1895FAE88E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{526E4535-3D21-47EE-A0B8-A1895FAE88E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{526E4535-3D21-47EE-A0B8-A1895FAE88E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{526E4535-3D21-47EE-A0B8-A1895FAE88E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

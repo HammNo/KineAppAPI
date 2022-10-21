@@ -69,3 +69,5 @@ C:\Users\Student\source\repos\KineApp\KineApp.API\bin\Debug\net6.0\KineApp.BLL.d
 C:\Users\Student\source\repos\KineApp\KineApp.API\bin\Debug\net6.0\Toolbox.EF.dll
 C:\Users\Student\source\repos\KineApp\KineApp.API\bin\Debug\net6.0\KineApp.BLL.pdb
 C:\Users\Student\source\repos\KineApp\KineApp.API\bin\Debug\net6.0\Toolbox.EF.pdb
+C:\Users\Student\source\repos\KineApp\KineApp.API\bin\Debug\net6.0\KineApp.IL.dll
+C:\Users\Student\source\repos\KineApp\KineApp.API\bin\Debug\net6.0\KineApp.IL.pdb

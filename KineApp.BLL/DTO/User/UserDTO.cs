@@ -15,6 +15,7 @@ namespace KineApp.BLL.DTO.User
         public UserGender Gender { get; set; }
         public string? Email { get; set; }
         public string PhoneNumber { get; set; } = string.Empty;
+        public bool IsValid { get; set; }
 
         public UserDTO(DL.Entities.User user)
         {
@@ -24,6 +25,7 @@ namespace KineApp.BLL.DTO.User
             Gender = user.Gender;
             Email = user.Email;
             PhoneNumber = user.PhoneNumber;
+            IsValid = (user.ValidationCode == null) ? true : false;
         }
     }
 }

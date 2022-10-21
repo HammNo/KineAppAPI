@@ -17,14 +17,20 @@ namespace KineApp.DAL.Repositories
         {
         }
 
-        public Week? GetDetailedWeek(DateTime date, bool getNotVDays)
+        public Week? GetByIdWithDays(Guid id)
+        {
+            return _entities.Include(w => w.Days)
+                            .SingleOrDefault(w => w.Id == id);  
+        }
+
+        public Week? GetWeekWithDaysAndTS(DateTime date, bool getNotVDays)
         {
             return _entities.Include(w => w.Days.Where(d => getNotVDays || d.Visible).OrderBy(d => d.Date))
                             .ThenInclude(d => d.TimeSlots)
                             .SingleOrDefault(w => w.FirstDay == date);
         }
 
-        public Week? GetDetailedWeekWithUsers(DateTime date, bool getNotVDays)
+        public Week? GetWeekWithDaysAndTSAndUsers(DateTime date, bool getNotVDays)
         {
             return _entities.Include(w => w.Days.Where(d => getNotVDays || d.Visible).OrderBy(d => d.Date))
                             .ThenInclude(d => d.TimeSlots)

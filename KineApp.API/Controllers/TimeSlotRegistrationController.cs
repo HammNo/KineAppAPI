@@ -22,7 +22,8 @@ namespace KineApp.API.Controllers
         {
             try
             {
-                _timeSlotService.Register(command);
+                //Vérifier droits admin, sinon : _timeSlotService.Register(command, false);
+                _timeSlotService.Register(command, true);
                 return NoContent();
             }
             catch (TimeSlotException tse)
@@ -32,6 +33,24 @@ namespace KineApp.API.Controllers
             catch (UserException ue)
             {
                 return BadRequest(ue.Message);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult UnsetAppointement(Guid id)
+        {
+            try
+            {
+                _timeSlotService.Unregister(id);
+                return NoContent();
+            }
+            catch (TimeSlotException tse)
+            {
+                return BadRequest(tse.Message);
             }
             catch (Exception e)
             {

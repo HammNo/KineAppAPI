@@ -13,5 +13,6 @@ namespace KineApp.BLL.Interfaces
         WeekDTO GetWeek(WeekSearchDTO query, bool getAsAdmin);
         Guid AddWeek(WeekAddDTO command);
         Guid AddDay(DayAddDTO command);
+        void RevealWeek(Guid id);
     }
 }

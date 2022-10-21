@@ -17,6 +17,11 @@ namespace KineApp.DAL.Repositories
         {
         }
 
+        public Day? GetById(Guid id)
+        {
+            return _entities.SingleOrDefault(d => d.Id == id);
+        }
+
         public Day? GetDayWithTimeSlots(DateTime date, bool getNotVisible)
         {
             return _entities.Include(d => d.TimeSlots)

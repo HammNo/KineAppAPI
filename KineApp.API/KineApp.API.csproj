@@ -18,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\KineApp.BLL\KineApp.BLL.csproj" />
     <ProjectReference Include="..\KineApp.DAL\KineApp.DAL.csproj" />
+    <ProjectReference Include="..\KineApp.IL\KineApp.IL.csproj" />
   </ItemGroup>
 
 </Project>

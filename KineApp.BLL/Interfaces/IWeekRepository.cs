@@ -10,7 +10,8 @@ namespace KineApp.BLL.Interfaces
 {
     public interface IWeekRepository : IRepository<Week>
     {
-        public Week? GetDetailedWeek(DateTime date, bool getNotVDays);
-        public Week? GetDetailedWeekWithUsers(DateTime date, bool getNotVDays);
+        public Week? GetByIdWithDays(Guid id);
+        public Week? GetWeekWithDaysAndTS(DateTime date, bool getNotVDays);
+        public Week? GetWeekWithDaysAndTSAndUsers(DateTime date, bool getNotVDays);
     }
 }

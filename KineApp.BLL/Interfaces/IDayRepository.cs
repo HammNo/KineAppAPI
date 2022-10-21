@@ -10,7 +10,8 @@ namespace KineApp.BLL.Interfaces
 {
     public interface IDayRepository : IRepository<Day>
     {
-        public Day? GetDayWithTimeSlots(DateTime date, bool getNotVisible);
-        public Day? GetDayWithTimeSlotsAndUsers(DateTime date, bool getNotVisible);
+        Day? GetById(Guid id);
+        Day? GetDayWithTimeSlots(DateTime date, bool getNotVisible);
+        Day? GetDayWithTimeSlotsAndUsers(DateTime date, bool getNotVisible);
     }
 }

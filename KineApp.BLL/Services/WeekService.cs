@@ -38,11 +38,11 @@ namespace KineApp.BLL.Services
                 refDate = FirstDayOfWeek((DateTime)query.FirstDayOfRefWeek);
             }
             Week? week;
-            if (getAsAdmin) week = _weekRepository.GetDetailedWeekWithUsers(refDate, true);
-            else week = _weekRepository.GetDetailedWeek(refDate, false);
+            if (getAsAdmin) week = _weekRepository.GetWeekWithDaysAndTSAndUsers(refDate, true);
+            else week = _weekRepository.GetWeekWithDaysAndTS(refDate, false);
             if (week == null)
             {
-                throw new WeekException("Week not implemented");
+                throw new KeyNotFoundException();
             }
             return new WeekDTO(week);
         }
@@ -77,7 +77,7 @@ namespace KineApp.BLL.Services
             }
             else
             {
-                Week? modelWeek = _weekRepository.GetDetailedWeek(FirstDayOfWeek((DateTime)command.DayOfModelWeek), true);
+                Week? modelWeek = _weekRepository.GetWeekWithDaysAndTS(FirstDayOfWeek((DateTime)command.DayOfModelWeek), true);
                 if (modelWeek == null)
                 {
                     throw new WeekException("Model week doesn't exist");
@@ -118,6 +118,24 @@ namespace KineApp.BLL.Services
             }
             Day newDay = CreateDay(cDayDate, command.Note, weekOfCDay.Id, false);
             return newDay.Id;
+        }
+
+        public void RevealWeek(Guid id)
+        {
+            Week? week = _weekRepository.GetByIdWithDays(id);
+            if (week == null)
+            {
+                throw new KeyNotFoundException();
+            }
+            if (week.FirstDay < DateTime.Today)
+            {
+                throw new WeekException("Can't reveal a whole past or current week");
+            }
+            foreach (Day day in week.Days)
+            {
+                day.Visible = true;
+            }
+            _weekRepository.Update(week);
         }
 
         #region private methods

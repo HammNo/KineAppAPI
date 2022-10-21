@@ -10,6 +10,7 @@
         "dependencies": {
           "KineApp.BLL": "1.0.0",
           "KineApp.DAL": "1.0.0",
+          "KineApp.IL": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.9",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.9",
           "Swashbuckle.AspNetCore": "6.2.3"
@@ -510,6 +511,14 @@
           "KineApp.DL.dll": {}
         }
       },
+      "KineApp.IL/1.0.0": {
+        "dependencies": {
+          "KineApp.BLL": "1.0.0"
+        },
+        "runtime": {
+          "KineApp.IL.dll": {}
+        }
+      },
       "Toolbox.EF/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.9"
@@ -885,6 +894,11 @@
       "sha512": ""
     },
     "KineApp.DL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KineApp.IL/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

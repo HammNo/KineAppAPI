@@ -1,4 +1,5 @@
 ﻿using KineApp.BLL.DTO.User;
+using KineApp.BLL.Exceptions;
 using KineApp.BLL.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -24,21 +25,26 @@ namespace KineApp.API.Controllers
             {
                 return Ok(_userService.FindUsers(query).ToList());
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 return BadRequest(e.Message);
             }
         }
 
         [HttpPost]
-        public IActionResult Add([FromBody] UserAddDTO command)
+        public async Task<IActionResult> Add([FromBody] UserAddDTO command)
         {
             try
             {
-                _userService.Add(command);
+                //Si admin : _userService.Add(command)
+                await _userService.Register(command);
                 return NoContent();
             }
-            catch(Exception e)
+            catch (UserException ue)
+            {
+                return BadRequest(ue.Message);
+            }
+            catch (Exception e)
             {
                 return BadRequest(e.Message);
             }
@@ -52,7 +58,37 @@ namespace KineApp.API.Controllers
                 _userService.Remove(id);
                 return NoContent();
             }
-            catch(Exception e)
+            catch (KeyNotFoundException)
+            {
+                return NotFound();
+            }
+            catch (UserException ue)
+            {
+                return BadRequest(ue.Message);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+
+        [HttpPatch("{uId}&{vCode}/validate")]
+        public IActionResult Validate(Guid uId, Guid vCode)
+        {
+            try
+            {
+                _userService.Validate(uId, vCode);
+                return NoContent();
+            }
+            catch (KeyNotFoundException)
+            {
+                return NotFound();
+            }
+            catch (UserException ue)
+            {
+                return BadRequest(ue.Message);
+            }
+            catch (Exception e)
             {
                 return BadRequest(e.Message);
             }

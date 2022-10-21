@@ -1,4 +1,5 @@
 ﻿using KineApp.BLL.DTO.Day;
+using KineApp.BLL.DTO.TimeSlot;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ namespace KineApp.BLL.Interfaces
     public interface IDayService
     {
         DayDTO GetDay(DaySearchDTO query, bool getAsAdmin);
-        //void Remove(int id);
+        void RevealDay(Guid id);
+        Guid AddTimeSlot(TimeSlotAddDTO command);
     }
 }

@@ -1,6 +1,8 @@
 using KineApp.BLL.DependencyInjection;
 using KineApp.DAL.Contexts;
 using KineApp.DAL.DependencyInjection;
+using KineApp.IL.Configurations;
+using KineApp.IL.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +15,9 @@ builder.Services.AddDbContext<KineAppContext>(
 builder.Services.AddRepositories();
 builder.Services.AddBusinessServices();
 builder.Services.AddControllers();
+
+MailerConfig mailerConfig = builder.Configuration.GetSection("Smtp").Get<MailerConfig>();
+builder.Services.AddMailer(mailerConfig);
 
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
