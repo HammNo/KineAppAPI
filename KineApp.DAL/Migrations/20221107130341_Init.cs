@@ -85,7 +85,7 @@ namespace KineApp.DAL.Migrations
                     StartTime = table.Column<TimeSpan>(type: "time", nullable: false),
                     EndTime = table.Column<TimeSpan>(type: "time", nullable: false),
                     Note = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: true),
-                    Booked = table.Column<bool>(type: "bit", nullable: false),
+                    Status = table.Column<int>(type: "int", nullable: false),
                     UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     DayId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
@@ -109,17 +109,17 @@ namespace KineApp.DAL.Migrations
             migrationBuilder.InsertData(
                 table: "Admins",
                 columns: new[] { "Id", "Email", "EncodedPassword", "Name", "Role", "Salt" },
-                values: new object[] { new Guid("a7d32dbf-5db8-4fc6-956e-e2e643f6b928"), "admin@mail.be", new byte[] { 226, 214, 24, 121, 100, 95, 27, 180, 128, 137, 212, 20, 118, 160, 155, 155, 124, 158, 91, 93, 150, 215, 106, 167, 96, 158, 71, 240, 61, 169, 162, 93, 125, 60, 145, 101, 79, 204, 18, 68, 25, 53, 230, 172, 224, 74, 67, 169, 71, 251, 186, 6, 107, 242, 254, 27, 216, 115, 223, 237, 46, 235, 106, 139 }, "Admin", 0, new Guid("d31fe37b-2e07-4d8f-ada7-a88c00e536d2") });
+                values: new object[] { new Guid("5c0a36d2-a6a3-4a8a-810d-ada70d83bfbb"), "admin@mail.be", new byte[] { 234, 29, 159, 110, 62, 6, 94, 139, 52, 81, 38, 29, 205, 126, 139, 83, 140, 220, 202, 207, 166, 127, 172, 156, 145, 6, 246, 65, 175, 190, 94, 118, 60, 19, 101, 59, 195, 182, 156, 67, 54, 186, 70, 32, 252, 167, 100, 127, 96, 69, 200, 116, 249, 91, 242, 253, 53, 22, 236, 79, 151, 63, 46, 76 }, "Admin", 0, new Guid("4a32933f-7e38-4797-aeae-49b3907dc723") });
 
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "Id", "Email", "FirstName", "Gender", "LastName", "PhoneNumber", "ValidationCode" },
-                values: new object[] { new Guid("cb9386c5-9a5a-40e1-a43d-86c3492a2234"), "test@mail.com", "Firsty", 2, "Zero", "0111111111", null });
+                values: new object[] { new Guid("e694aa88-c4d5-4e86-9f08-13ac1b001873"), "test@mail.com", "Firsty", 2, "Zero", "0111111111", null });
 
             migrationBuilder.InsertData(
                 table: "Weeks",
                 columns: new[] { "Id", "FirstDay", "LastDay", "Note" },
-                values: new object[] { new Guid("a0795774-c1fc-4893-b888-77724ac1c6f9"), new DateTime(2021, 1, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2021, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), null });
+                values: new object[] { new Guid("68018c84-cdf5-4b1b-a40c-ccbf817393a1"), new DateTime(2021, 1, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2021, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), null });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Admins_Email",

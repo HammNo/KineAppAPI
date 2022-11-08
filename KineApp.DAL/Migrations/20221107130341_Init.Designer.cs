@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KineApp.DAL.Migrations
 {
     [DbContext(typeof(KineAppContext))]
-    [Migration("20221020133210_Init")]
+    [Migration("20221107130341_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -64,12 +64,12 @@ namespace KineApp.DAL.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("a7d32dbf-5db8-4fc6-956e-e2e643f6b928"),
+                            Id = new Guid("5c0a36d2-a6a3-4a8a-810d-ada70d83bfbb"),
                             Email = "admin@mail.be",
-                            EncodedPassword = new byte[] { 226, 214, 24, 121, 100, 95, 27, 180, 128, 137, 212, 20, 118, 160, 155, 155, 124, 158, 91, 93, 150, 215, 106, 167, 96, 158, 71, 240, 61, 169, 162, 93, 125, 60, 145, 101, 79, 204, 18, 68, 25, 53, 230, 172, 224, 74, 67, 169, 71, 251, 186, 6, 107, 242, 254, 27, 216, 115, 223, 237, 46, 235, 106, 139 },
+                            EncodedPassword = new byte[] { 234, 29, 159, 110, 62, 6, 94, 139, 52, 81, 38, 29, 205, 126, 139, 83, 140, 220, 202, 207, 166, 127, 172, 156, 145, 6, 246, 65, 175, 190, 94, 118, 60, 19, 101, 59, 195, 182, 156, 67, 54, 186, 70, 32, 252, 167, 100, 127, 96, 69, 200, 116, 249, 91, 242, 253, 53, 22, 236, 79, 151, 63, 46, 76 },
                             Name = "Admin",
                             Role = 0,
-                            Salt = new Guid("d31fe37b-2e07-4d8f-ada7-a88c00e536d2")
+                            Salt = new Guid("4a32933f-7e38-4797-aeae-49b3907dc723")
                         });
                 });
 
@@ -105,9 +105,6 @@ namespace KineApp.DAL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<bool>("Booked")
-                        .HasColumnType("bit");
-
                     b.Property<Guid>("DayId")
                         .HasColumnType("uniqueidentifier");
 
@@ -120,6 +117,9 @@ namespace KineApp.DAL.Migrations
 
                     b.Property<TimeSpan>("StartTime")
                         .HasColumnType("time");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
 
                     b.Property<Guid?>("UserId")
                         .HasColumnType("uniqueidentifier");
@@ -170,7 +170,7 @@ namespace KineApp.DAL.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("cb9386c5-9a5a-40e1-a43d-86c3492a2234"),
+                            Id = new Guid("e694aa88-c4d5-4e86-9f08-13ac1b001873"),
                             Email = "test@mail.com",
                             FirstName = "Firsty",
                             Gender = 2,
@@ -202,7 +202,7 @@ namespace KineApp.DAL.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("a0795774-c1fc-4893-b888-77724ac1c6f9"),
+                            Id = new Guid("68018c84-cdf5-4b1b-a40c-ccbf817393a1"),
                             FirstDay = new DateTime(2021, 1, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             LastDay = new DateTime(2021, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });

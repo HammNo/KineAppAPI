@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KineApp.DL.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace KineApp.DL.Entities
 
         public string? Note { get; set; }
 
-        public bool Booked { get; set; } = false;
+        public TimeSlotStatus Status { get; set; } 
         #endregion
 
         #region relations

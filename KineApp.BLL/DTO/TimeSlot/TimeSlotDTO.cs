@@ -1,4 +1,5 @@
 ﻿using KineApp.BLL.DTO.User;
+using KineApp.DL.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace KineApp.BLL.DTO.TimeSlot
 
         public string? Note { get; set; }
 
-        public bool Booked { get; set; } = false;
+        public TimeSlotStatus Status { get; set; }
         public UserDTO? User { get; set; }
 
         public TimeSlotDTO(DL.Entities.TimeSlot timeSlot)
@@ -26,7 +27,7 @@ namespace KineApp.BLL.DTO.TimeSlot
             StartTime = timeSlot.StartTime;
             EndTime = timeSlot.EndTime;
             Note = timeSlot.Note;
-            Booked = timeSlot.Booked;
+            Status = timeSlot.Status;
             User = (timeSlot.User == null)? null : new UserDTO(timeSlot.User);
         }
     }

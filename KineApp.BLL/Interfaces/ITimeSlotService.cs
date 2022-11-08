@@ -9,9 +9,12 @@ namespace KineApp.BLL.Interfaces
 {
     public interface ITimeSlotService
     {
-        void Register(TimeSlotRegistrationDTO command, bool hasAdminRights);
-        void Unregister(Guid id);
+        IEnumerable<TimeSlotDTO> GetAllWaiting();
+        void Register(TimeSlotRegistrationDTO command);
+        Task Unregister(Guid id);
         Guid Remove(Guid id);
-        void BookByUser(TimeSlotBookingDTO command, Guid? userId);
+        Task TryRegister(TimeSlotBookingDTO command, Guid userId);
+        Task ConfirmRegistration(Guid timeSlotId);
+        Task RejectRegistration(Guid timeSlotId);
     }
 }

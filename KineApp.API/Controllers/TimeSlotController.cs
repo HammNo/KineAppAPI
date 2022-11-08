@@ -1,6 +1,7 @@
 ﻿using KineApp.BLL.DTO.TimeSlot;
 using KineApp.BLL.Exceptions;
 using KineApp.BLL.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,7 +20,22 @@ namespace KineApp.API.Controllers
             _timeSlotService = timeSlotService;
         }
 
+        [HttpGet("getWaiting")]
+        [Authorize(Roles = "Admin")]
+        public IActionResult GetWaiting()
+        {
+            try
+            {
+                return Ok(_timeSlotService.GetAllWaiting());
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public IActionResult Add(TimeSlotAddDTO command)
         {
             try
@@ -42,6 +58,7 @@ namespace KineApp.API.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public IActionResult Delete(Guid id)
         {
             try

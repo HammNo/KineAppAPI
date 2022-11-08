@@ -11,5 +11,6 @@ namespace KineApp.BLL.Interfaces
     public interface ITimeSlotRepository : IRepository<TimeSlot>
     {
         TimeSlot? GetWithUserAndDay(Guid id);
+        IEnumerable<TimeSlot> GetAllWaitingForConfirmation();
     }
 }

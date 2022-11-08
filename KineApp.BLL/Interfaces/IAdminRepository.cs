@@ -10,5 +10,6 @@ namespace KineApp.BLL.Interfaces
 {
     public interface IAdminRepository : IRepository<Admin>
     {
+        IEnumerable<string>? GetAllMails();
     }
 }

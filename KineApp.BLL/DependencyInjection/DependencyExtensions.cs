@@ -12,6 +12,7 @@ namespace KineApp.BLL.DependencyInjection
             services.AddScoped<IDayService, DayService>();
             services.AddScoped<IWeekService, WeekService>();
             services.AddScoped<ITimeSlotService, TimeSlotService>();
+            services.AddScoped<IAuthenticationService, AuthenticationService>();
             return services;
         }
     }

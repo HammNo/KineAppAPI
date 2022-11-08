@@ -9,10 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\KineApp.DL\KineApp.DL.csproj" />
     <ProjectReference Include="..\ToolBox.EF\Toolbox.EF.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="DTO\Admin\" />
+    <ProjectReference Include="..\Toolbox.Security\Toolbox.Security.csproj" />
   </ItemGroup>
 
 </Project>

@@ -465,7 +465,8 @@
       "KineApp.BLL/1.0.0": {
         "dependencies": {
           "KineApp.DL": "1.0.0",
-          "Toolbox.EF": "1.0.0"
+          "Toolbox.EF": "1.0.0",
+          "Toolbox.Security": "1.0.0"
         },
         "runtime": {
           "KineApp.BLL.dll": {}

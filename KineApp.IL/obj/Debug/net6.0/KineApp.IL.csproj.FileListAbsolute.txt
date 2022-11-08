@@ -17,3 +17,5 @@ C:\Users\Student\source\repos\KineApp\KineApp.IL\obj\Debug\net6.0\KineApp.IL.dll
 C:\Users\Student\source\repos\KineApp\KineApp.IL\obj\Debug\net6.0\refint\KineApp.IL.dll
 C:\Users\Student\source\repos\KineApp\KineApp.IL\obj\Debug\net6.0\KineApp.IL.pdb
 C:\Users\Student\source\repos\KineApp\KineApp.IL\obj\Debug\net6.0\ref\KineApp.IL.dll
+C:\Users\Student\source\repos\KineApp\KineApp.IL\bin\Debug\net6.0\Toolbox.Security.dll
+C:\Users\Student\source\repos\KineApp\KineApp.IL\bin\Debug\net6.0\Toolbox.Security.pdb

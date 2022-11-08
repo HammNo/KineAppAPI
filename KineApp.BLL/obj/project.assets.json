@@ -217,6 +217,16 @@
         "runtime": {
           "bin/placeholder/Toolbox.EF.dll": {}
         }
+      },
+      "Toolbox.Security/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Toolbox.Security.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Toolbox.Security.dll": {}
+        }
       }
     }
   },
@@ -553,12 +563,18 @@
       "type": "project",
       "path": "../ToolBox.EF/Toolbox.EF.csproj",
       "msbuildProject": "../ToolBox.EF/Toolbox.EF.csproj"
+    },
+    "Toolbox.Security/1.0.0": {
+      "type": "project",
+      "path": "../Toolbox.Security/Toolbox.Security.csproj",
+      "msbuildProject": "../Toolbox.Security/Toolbox.Security.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "KineApp.DL >= 1.0.0",
-      "Toolbox.EF >= 1.0.0"
+      "Toolbox.EF >= 1.0.0",
+      "Toolbox.Security >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -601,6 +617,9 @@
             },
             "C:\\Users\\Student\\source\\repos\\KineApp\\ToolBox.EF\\Toolbox.EF.csproj": {
               "projectPath": "C:\\Users\\Student\\source\\repos\\KineApp\\ToolBox.EF\\Toolbox.EF.csproj"
+            },
+            "C:\\Users\\Student\\source\\repos\\KineApp\\Toolbox.Security\\Toolbox.Security.csproj": {
+              "projectPath": "C:\\Users\\Student\\source\\repos\\KineApp\\Toolbox.Security\\Toolbox.Security.csproj"
             }
           }
         }

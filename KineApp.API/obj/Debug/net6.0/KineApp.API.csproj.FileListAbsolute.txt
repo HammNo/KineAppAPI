@@ -71,3 +71,5 @@ C:\Users\Student\source\repos\KineApp\KineApp.API\bin\Debug\net6.0\KineApp.BLL.p
 C:\Users\Student\source\repos\KineApp\KineApp.API\bin\Debug\net6.0\Toolbox.EF.pdb
 C:\Users\Student\source\repos\KineApp\KineApp.API\bin\Debug\net6.0\KineApp.IL.dll
 C:\Users\Student\source\repos\KineApp\KineApp.API\bin\Debug\net6.0\KineApp.IL.pdb
+C:\Users\Student\source\repos\KineApp\KineApp.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Student\source\repos\KineApp\KineApp.API\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll

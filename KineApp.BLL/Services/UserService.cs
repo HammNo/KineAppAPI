@@ -2,6 +2,7 @@
 using KineApp.BLL.Exceptions;
 using KineApp.BLL.Interfaces;
 using KineApp.BLL.Mappers;
+using KineApp.BLL.Templates;
 using KineApp.DL.Entities;
 using System;
 using System.Collections.Generic;
@@ -17,21 +18,6 @@ namespace KineApp.BLL.Services
     {
         private readonly IUserRepository _userRepository;
         private readonly IMailer _mailer;
-
-        private readonly string RegisterMailTemplate = @"
-            <h2>Votre inscription sur la plateforme KineApp</h2>
-            <div>
-                <ul>
-                    <li>Mail: __mail__</li>
-                    <li>Nom: __lastname__</li>
-                    <li>Prénom: __firstname__</li>
-                </ul>
-                <p>
-                    Afin de compléter la démarche, veuillez cliquer sur le lien 
-                    <a href=''>(pas encore implémenté)<a>
-                </p>
-            </div>
-        ";
 
         public UserService(IUserRepository userRepository, IMailer mailer)
         {
@@ -89,7 +75,7 @@ namespace KineApp.BLL.Services
                 newUser = _userRepository.Add(tmpUser);
                 await _mailer.Send(
                     "Inscription KineApp",
-                    RegisterMailTemplate
+                    MailTemplates.UserRegister
                         .Replace("__mail__", command.Email)
                         .Replace("__lastname__", command.LastName)
                         .Replace("__firstname__", command.FirstName)
@@ -116,7 +102,7 @@ namespace KineApp.BLL.Services
             if (user.ValidationCode != validationCode)
             {
                 Remove(user.Id);
-                throw new UserException("Wrong validation code. User has been deleted.");
+                throw new UserException("Wrong validation code, user has been deleted");
             }
             user.ValidationCode = null;
             _userRepository.Update(user);

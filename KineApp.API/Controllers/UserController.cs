@@ -1,8 +1,10 @@
 ﻿using KineApp.BLL.DTO.User;
 using KineApp.BLL.Exceptions;
 using KineApp.BLL.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace KineApp.API.Controllers
 {
@@ -19,6 +21,7 @@ namespace KineApp.API.Controllers
 
         [HttpGet]
         [Produces(typeof(IEnumerable<UserDTO>))]
+        [Authorize(Roles = "Admin")]
         public IActionResult Get([FromQuery] UserSearchDTO query)
         {
             try
@@ -36,8 +39,19 @@ namespace KineApp.API.Controllers
         {
             try
             {
-                //Si admin : _userService.Add(command)
-                await _userService.Register(command);
+                string? role = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
+                if (role == "Admin")
+                {
+                    _userService.Add(command);
+                }
+                else if (role == "User")
+                {
+                    await _userService.Register(command);
+                }
+                else
+                {
+                    return BadRequest("Must be logged to add user");
+                }
                 return NoContent();
             }
             catch (UserException ue)
@@ -51,6 +65,7 @@ namespace KineApp.API.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public IActionResult Delete(Guid id)
         {
             try
@@ -73,6 +88,7 @@ namespace KineApp.API.Controllers
         }
 
         [HttpPatch("{uId}&{vCode}/validate")]
+        [Authorize(Roles = "Admin, User")]
         public IActionResult Validate(Guid uId, Guid vCode)
         {
             try

@@ -603,7 +603,8 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "KineApp.DL": "1.0.0",
-          "Toolbox.EF": "1.0.0"
+          "Toolbox.EF": "1.0.0",
+          "Toolbox.Security": "1.0.0"
         },
         "compile": {
           "bin/placeholder/KineApp.BLL.dll": {}

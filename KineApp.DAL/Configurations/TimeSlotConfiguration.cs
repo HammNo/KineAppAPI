@@ -15,7 +15,7 @@ namespace KineApp.DAL.Configurations
         {
             builder.Property(t => t.StartTime).IsRequired();
             builder.Property(t => t.EndTime).IsRequired();
-            builder.Property(d => d.Booked).IsRequired();
+            builder.Property(d => d.Status).IsRequired();
             builder.Property(d => d.Note).HasMaxLength(1000);
             builder.HasOne(t => t.User).WithMany(u => u.TimeSlots)
                                        .HasForeignKey(t => t.UserId)

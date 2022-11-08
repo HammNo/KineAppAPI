@@ -15,5 +15,10 @@ namespace KineApp.DAL.Repositories
         public AdminRepository(KineAppContext context) : base(context)
         {
         }
+
+        public IEnumerable<string>? GetAllMails()
+        {
+            return _entities.Select(a => a.Email);
+        }
     }
 }

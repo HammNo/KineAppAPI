@@ -1,6 +1,7 @@
 ﻿using KineApp.BLL.Interfaces;
 using KineApp.DAL.Contexts;
 using KineApp.DL.Entities;
+using KineApp.DL.Enums;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,13 @@ namespace KineApp.DAL.Repositories
             return _entities.Include(t => t.Day)
                             .Include(t => t.User)
                             .SingleOrDefault(t => t.Id == id);
+        }
+
+        public IEnumerable<TimeSlot> GetAllWaitingForConfirmation()
+        {
+            return _entities.Include(t => t.Day)
+                            .Include(t => t.User)
+                            .Where(t => t.Status == TimeSlotStatus.WaitingForConfirmation);
         }
     }
 }

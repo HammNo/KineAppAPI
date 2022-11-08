@@ -1,8 +1,10 @@
 ﻿using KineApp.BLL.DTO.Week;
 using KineApp.BLL.Exceptions;
 using KineApp.BLL.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace KineApp.API.Controllers
 {
@@ -23,9 +25,7 @@ namespace KineApp.API.Controllers
         {
             try
             {
-                //! Tester droits d'administration
-                //Si simple user : return Ok(_weekService.GetWeek(query, false));
-                return Ok(_weekService.GetWeek(query, true));
+                return Ok(_weekService.GetWeek(query, User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value == "Admin"));
             }
             catch (KeyNotFoundException)
             {
@@ -38,6 +38,7 @@ namespace KineApp.API.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public IActionResult Add([FromBody] WeekAddDTO command)
         {
             try
@@ -56,6 +57,7 @@ namespace KineApp.API.Controllers
         }
 
         [HttpPatch("{id}/reveal")]
+        [Authorize(Roles = "Admin")]
         public IActionResult Reveal(Guid id)
         {
             try
